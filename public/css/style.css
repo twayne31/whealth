@@ -1,0 +1,44 @@
+.outerSquare {
+    border: 1px solid #fffdfd9d;
+    border-radius: 5px;
+    background: #fffffff5;
+    height: 100%;
+    width: 40%;
+    text-align: center /* display: none; */;
+    margin: 100px auto;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #44c266;
+    border-color: #44c266;
+}
+
+img{
+    width: 275px;
+    padding: 15px 0 0 0;
+}
+h4{
+    font-family: 'Assistant', sans-serif;
+}
+.form-signin{
+    width: 70%;
+    margin: 30px auto;
+}
+.imageTag {
+    background: url("../images/orangeTree.jpg") no-repeat center center;
+    filter: brightness(95%);
+    background-size: cover;
+    min-height: 100%;
+    /* min-width: 100% */
+    min-width: 1024px;
+	
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: 100%;
+	
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+     
+}
