@@ -6,11 +6,24 @@
     width: 45%;
     text-align: center /* display: none; */;
     margin: 100px auto;
+    padding: 15px 0 0 0;
 }
 .btn-primary {
     color: #fff;
     background-color: #44c266;
     border-color: #44c266;
+}
+.btn-primary:hover{
+    background-color: #da6e00;
+    border-color: rgba(255, 255, 255, 0);
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #58bb62;
+    outline: 0;
+    box-shadow: 0 0 0 0.15rem rgb(79, 197, 115);
 }
 
 img{
@@ -18,10 +31,11 @@ img{
     padding: 15px 0 0 0;
 }
 h4{
-    font-family: 'Assistant', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px
 }
 .form-signin{
-    width: 70%;
+    width: 60%;
     margin: 30px auto;
 }
 .imageTag {
