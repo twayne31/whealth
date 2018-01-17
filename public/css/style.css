@@ -1,9 +1,9 @@
 .outerSquare {
     border: 1px solid #fffdfd9d;
     border-radius: 5px;
-    background: #fffffff5;
+    background: #ffffffee;
     height: 100%;
-    width: 40%;
+    width: 45%;
     text-align: center /* display: none; */;
     margin: 100px auto;
 }
@@ -14,7 +14,7 @@
 }
 
 img{
-    width: 275px;
+    width: 300px;
     padding: 15px 0 0 0;
 }
 h4{
