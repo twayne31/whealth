@@ -1,0 +1,31 @@
+{
+  "name": "whealth",
+  "version": "1.0.0",
+  "description": "Whealth App reduces the barriers that individuals face who live in food deserts and improve access to healthier alternative food options.",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "fs": "^0.0.1-security",
+    "mysql": "^2.15.0",
+    "mysql2": "^1.5.1",
+    "path": "^0.12.7",
+    "sequelize": "^1.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/twayne31/whealth.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/twayne31/whealth/issues"
+  },
+  "homepage": "https://github.com/twayne31/whealth#readme"
+}
