@@ -1,0 +1,58 @@
+.outerSquare {
+    border: 1px solid #fffdfd9d;
+    border-radius: 5px;
+    background: #ffffffee;
+    height: 100%;
+    width: 45%;
+    text-align: center /* display: none; */;
+    margin: 100px auto;
+    padding: 15px 0 0 0;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #44c266;
+    border-color: #44c266;
+}
+.btn-primary:hover{
+    background-color: #da6e00;
+    border-color: rgba(255, 255, 255, 0);
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #58bb62;
+    outline: 0;
+    box-shadow: 0 0 0 0.15rem rgb(79, 197, 115);
+}
+
+img{
+    width: 300px;
+    padding: 15px 0 0 0;
+}
+h4{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px
+}
+.form-signin{
+    width: 60%;
+    margin: 30px auto;
+}
+.imageTag {
+    background: url("../semantic/assets/images/orangeTree.jpg") no-repeat center center;
+    filter: brightness(95%);
+    background-size: cover;
+    min-height: 100%;
+    /* min-width: 100% */
+    min-width: 1024px;
+	
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: 100%;
+	
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+     
+}
