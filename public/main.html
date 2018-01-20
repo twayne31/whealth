@@ -9,7 +9,7 @@
     <!-- Site Properties -->
     <title>Homepage - Semantic</title>
     <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.css">
-
+    <script src="https://code.jquery.com/jquery-3.3.0.min.js"></script>
     <style type="text/css">
 
         .hidden.menu {
@@ -100,7 +100,6 @@
 
     </style>
 
-    <script src="assets/library/jquery.min.js"></script>
     <script src="semantic/dist/components/visibility.js"></script>
     <script src="semantic/dist/components/sidebar.js"></script>
     <script src="semantic/dist/components/transition.js"></script>
@@ -184,7 +183,15 @@
                 <img src="semantic/assets/images/whealthLogo.png" width="400"/></h1>
             <h2>We Help You Make Healthy Choices</h2>
             <br>
-            <div class="ui huge primary button">Get Started <i class="right arrow icon"></i></div>
+     <!-- search bar form -->
+              <div class="ui form stackable center aligned page grid">
+                <div class="inline fields">
+                  <div class="eight wide field">
+                    <input type="text" placeholder="what did you have to eat today?">
+                  </div> 
+                  <div class="ui submit button">Submit</div>
+                </div>
+              </div>
         </div>
 
     </div>
@@ -269,7 +276,6 @@
         </div>
     </div>
 </div>
-
+<script src="javascript/nutrition.js"></script>
 </body>
-
 </html>
