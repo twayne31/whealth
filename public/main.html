@@ -9,7 +9,6 @@
     <!-- Site Properties -->
     <title>Homepage - Semantic</title>
     <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.css">
-    <script src="https://code.jquery.com/jquery-3.3.0.min.js"></script>
     <style type="text/css">
 
         .hidden.menu {
@@ -99,10 +98,13 @@
 
 
     </style>
-
+    
+    <script src="https://code.jquery.com/jquery-3.3.0.min.js"></script>
     <script src="semantic/dist/components/visibility.js"></script>
     <script src="semantic/dist/components/sidebar.js"></script>
     <script src="semantic/dist/components/transition.js"></script>
+    <script src="javascript/nutrition.js"></script>
+
     <script>
         $(document)
             .ready(function() {
@@ -184,14 +186,16 @@
             <h2>We Help You Make Healthy Choices</h2>
             <br>
      <!-- search bar form -->
-              <div class="ui form stackable center aligned page grid">
+              <div class="ui form stackable center aligned page grid" id="searchForm">
                 <div class="inline fields">
-                  <div class="eight wide field">
-                    <input type="text" placeholder="what did you have to eat today?">
-                  </div> 
-                  <div class="ui submit button">Submit</div>
+                  <div class="eight wide field searchBar">
+                    <input type="text" placeholder="what did you have to eat today?" id= "searchBar">
+                  </div>
+                  <div class="ui submit button searchBar" onclick="searchValue()">Submit</div> 
                 </div>
               </div>
+              <!-- <div class="ui submit button searchBar" onclick="searchValue()">Submit</div> -->
+
         </div>
 
     </div>
@@ -276,6 +280,5 @@
         </div>
     </div>
 </div>
-<script src="javascript/nutrition.js"></script>
 </body>
 </html>
