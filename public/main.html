@@ -72,6 +72,11 @@
             display: none;
         }
 
+        .ui.inverted.segment {
+            background-image: url("images/pw_maze_black.png");
+        }
+
+
         @media only screen and (max-width: 700px) {
             .ui.fixed.menu {
                 display: none !important;
@@ -100,9 +105,7 @@
     </style>
     
     <script src="https://code.jquery.com/jquery-3.3.0.min.js"></script>
-    <script src="semantic/dist/components/visibility.js"></script>
-    <script src="semantic/dist/components/sidebar.js"></script>
-    <script src="semantic/dist/components/transition.js"></script>
+    <script src="semantic/dist/semantic.js"></script>
     <script src="javascript/nutrition.js"></script>
 
     <script>
@@ -140,14 +143,7 @@
         <a class="item">Grocery Options</a>
         <a class="item">Food Desert Locator</a>
         <a class="item"></a>
-        <div class="right menu">
-            <div class="item">
-                <a class="ui button">Log in</a>
-            </div>
-            <div class="item">
-                <a class="ui primary button">Sign Up</a>
-            </div>
-        </div>
+
     </div>
 </div>
 
@@ -171,12 +167,7 @@
                     <i class="sidebar icon"></i>
                 </a>
                 <a class="active item">Home</a>
-                <a class="item">Grocery Options</a>
-                <a class="item">Food Desert Locator</a>
-                <div class="right item">
-                    <a class="ui inverted button">Log in</a>
-                    <a class="ui inverted button">Sign Up</a>
-                </div>
+                <a class="item">About whealth</a>
             </div>
         </div>
 
@@ -185,55 +176,27 @@
                 <img src="semantic/assets/images/whealthLogo.png" width="400"/></h1>
             <h2>We Help You Make Healthy Choices</h2>
             <br>
-     <!-- search bar form -->
-              <div class="ui form stackable center aligned page grid" id="searchForm">
-                <div class="inline fields">
-                  <div class="eight wide field searchBar">
-                    <input type="text" placeholder="what did you have to eat today?" id= "searchBar">
-                  </div>
-                  <div class="ui submit button mainSearch searchBar" >Submit</div> 
+            <div class="ui search">
+                <div class="ui left icon input">
+                    <input class="prompt" type="text" placeholder="Search Foods">
+                    <i class="search icon"></i>
                 </div>
-                <select class='itemsToSelect'>
-                </select>
-              </div>
-              <!-- <div class="ui submit button searchBar" onclick="searchValue()">Submit</div> -->
-
+            </div>
         </div>
 
     </div>
 
-    <!--<div class="ui vertical stripe segment">-->
-        <!--<div class="ui middle aligned stackable grid container">-->
-            <!--<div class="row">-->
-                <!--<div class="eight wide column">-->
-                    <!--<h3 class="ui header">We Help Companies and Companions</h3>-->
-                    <!--<p>We can give your company superpowers to do things that they never thought possible. Let us delight your customers and empower your needssemantic.through pure data analytics.</p>-->
-                    <!--<h3 class="ui header">We Make Bananas That Can Dance</h3>-->
-                    <!--<p>Yes that's right, you thought it was the stuff of dreams, but even bananas can be bioengineered.</p>-->
-                <!--</div>-->
-                <!--<div class="six wide right floated column">-->
-                    <!--<img src="assets/images/wireframe/white-image.png" class="ui large bordered rounded image">-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="row">-->
-                <!--<div class="center aligned column">-->
-                    <!--<a class="ui huge button">Check Them Out</a>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
 
     <div class="ui vertical stripe quote segment">
         <div class="ui equal width stackable internally celled grid">
             <div class="center aligned row">
 
                 <div class="column">
-                    <h3>Look Up Food Item</h3>
-                    <p>This is where Supermarket API comes in</p>
+
                 </div>
                 <div class="column">
-                    <h3>Info will display here.</h3>
-                    <p>This is where Supermarket API comes in</p>
+                    <!--<h3>Nutrition Label</h3>-->
+                    <p></p>
 
                     <p>
                     </p>
@@ -259,24 +222,24 @@
 
     <div class="ui inverted vertical footer segment">
         <div class="ui container">
-            <div class="ui stackable inverted divided equal height stackable grid">
-                <div class="three wide column">
-                    <h4 class="ui inverted header">About</h4>
-                    <div class="ui inverted link list">
-                        <a href="#" class="item">Sitemap</a>
-                        <a href="#" class="item">Contact Us</a>
-                    </div>
-                </div>
-                <div class="three wide column">
-                    <h4 class="ui inverted header">Services</h4>
-                    <div class="ui inverted link list">
-                        <a href="#" class="item">Banana Pre-Order</a>
-                        <a href="#" class="item">DNA FAQ</a>
-                    </div>
-                </div>
+            <!--<div class="ui stackable inverted divided equal height stackable grid">-->
+                <!--<div class="three wide column">-->
+                    <!--<h4 class="ui inverted header">About</h4>-->
+                    <!--<div class="ui inverted link list">-->
+                        <!--<a href="#" class="item">Sitemap</a>-->
+                        <!--<a href="#" class="item">Contact Us</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="three wide column">-->
+                    <!--<h4 class="ui inverted header">Services</h4>-->
+                    <!--<div class="ui inverted link list">-->
+                        <!--<a href="#" class="item">Banana Pre-Order</a>-->
+                        <!--<a href="#" class="item">DNA FAQ</a>-->
+                    <!--</div>-->
+                <!--</div>-->
                 <div class="seven wide column">
-                    <h4 class="ui inverted header">Footer Header</h4>
-                    <p>Extra space for a call to action inside the footer that could help re-engage users.</p>
+                    <h4 class="ui inverted header">Learn More about Whealth</h4>
+                    <p>Learn more about whealth. Visit us on Facebook (icons) Instagram (icons) and Linkedin (icons).</p>
                 </div>
             </div>
         </div>
