@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+$(document).ready(function () {
     console.log("ready!");
 
     reloadFoodChoices();
@@ -37,12 +37,12 @@ $( document ).ready(function() {
                         Food_Group: null,
                     })
                 }).done(function (foodChoicesResponse) {
+                    console.log(foodChoicesResponse)
 
                 }).fail(function (error) {
                     console.error(error);
                 });
 
-                console.log(foodChoicesResponse)
                 // TODO, nice to have, LOW priority: GET `https://api.nutritionix.com/v1_1/item?id=${selected.id}` for nutrition label data
             },
             minCharacters: 3
@@ -109,17 +109,17 @@ function reloadFoodChoices() {
                                 selected: item.Meal.toLowerCase() === 'breakfast',
                             },
                             {
-                                name     : 'Lunch',
-                                value    : 'lunch',
+                                name: 'Lunch',
+                                value: 'lunch',
                                 selected: item.Meal.toLowerCase() === 'lunch',
                             },
                             {
-                                name     : 'Dinner',
-                                value    : 'dinner',
+                                name: 'Dinner',
+                                value: 'dinner',
                                 selected: item.Meal.toLowerCase() === 'dinner',
                             }
                         ],
-                        onChange: function(value, text, $selectedItem) {
+                        onChange: function (value, text, $selectedItem) {
                             // custom action
                             // TODO: PUT the meals to API
                             console.log('value', value)
