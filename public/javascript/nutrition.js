@@ -93,6 +93,7 @@ function reloadFoodChoices() {
                     // TODO DELETE /api/foodChoices/:id
                     var id = $(this).attr('data-item-id');
                     console.log('DELETE', id);
+                    reloadFoodChoices();
                 });
 
                 foodChoice.append(mealChoices);
@@ -123,7 +124,10 @@ function reloadFoodChoices() {
                             // TODO: PUT the meals to API
                             console.log('value', value)
                             console.log('value', text)
-                            console.log('selectedItem', $selectedItem)
+                            console.log('selectedItem', $selectedItem);
+                            if (value) {
+                                reloadFoodChoices();
+                            }
                         }
                     })
                 ;
