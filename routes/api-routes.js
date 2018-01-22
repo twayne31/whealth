@@ -36,6 +36,7 @@ module.exports = function(app) {
 
 
   app.post("/api/foodChoices", function(req, res) {
+    console.log("foodChoices")
       console.log(req.body);
       models.foodChoice.create({
         Qty: req.body.QTY,
