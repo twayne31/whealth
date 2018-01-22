@@ -17,7 +17,9 @@ $(document).ready(function () {
                             fields: item.fields,
                         };
                     });
-                    return {results};
+                    return {
+                        results
+                    };
                 },
             },
             onSelect: function (selected, results) {
@@ -67,69 +69,23 @@ function reloadFoodChoices() {
                             `);
         } else {
             allFoodChoices.forEach(function (item) {
-                var foodChoice = $('<div>');
+                var foodChoice = $('<div>').addClass("foodi");
                 foodChoice.html(`
                                 <h4>${item.Food}</h4>
                                 <div>${item.Qty} ${item.Unit} ${item.Calories} calories</div>
                                 `);
                 var mealChoices = $('<div class="content">');
-                var dropdownMeals = $(`
-                                    <div class="ui dropdown meals">
-                                      <div class="text"></div>
-                                      <i class="dropdown icon"></i>
-                                    </div>
-                                `);
 
-                mealChoices.append(dropdownMeals);
+                var deleteFoodChoiceBtn = $(`
+                <button class="negative ui icon button" data-item-id="${item.id}">
+                  <i class="trash icon"></i>
+                </button>
+            `);
 
-
-                var deleteFoodChoice = $(`
-                                    <button class="negative ui icon button" data-item-id="${item.id}">
-                                      <i class="trash icon"></i>
-                                    </button>
-                                `);
-
-                deleteFoodChoice.on('click', function () {
-                    // TODO DELETE /api/foodChoices/:id
-                    var id = $(this).attr('data-item-id');
-                    console.log('DELETE', id);
-                    reloadFoodChoices();
-                });
-
-                foodChoice.append(mealChoices);
-                foodChoice.append(deleteFoodChoice);
+                foodChoice.append(deleteFoodChoiceBtn);
                 container.append(foodChoice);
 
-                $('.dropdown.meals')
-                    .dropdown({
-                        values: [
-                            {
-                                name: 'Breakfast',
-                                value: 'breakfast',
-                                selected: item.Meal.toLowerCase() === 'breakfast',
-                            },
-                            {
-                                name: 'Lunch',
-                                value: 'lunch',
-                                selected: item.Meal.toLowerCase() === 'lunch',
-                            },
-                            {
-                                name: 'Dinner',
-                                value: 'dinner',
-                                selected: item.Meal.toLowerCase() === 'dinner',
-                            }
-                        ],
-                        onChange: function (value, text, $selectedItem) {
-                            // custom action
-                            // TODO: PUT the meals to API
-                            console.log('value', value)
-                            console.log('value', text)
-                            console.log('selectedItem', $selectedItem);
-                            if (value) {
-                                reloadFoodChoices();
-                            }
-                        }
-                    })
+
                 ;
             })
         }
@@ -138,3 +94,21 @@ function reloadFoodChoices() {
         console.error(error);
     });
 }
+
+// function deleteFoodChoice() {
+//     var id = $(this).attr('data-item-id');
+//     $.ajax({
+//             method: "DELETE",
+//             url: "/api/foodChoices" + id
+//         })
+//         .then(function () {
+//             reloadFoodChoices();
+//         });
+
+
+//     deleteFoodChoiceBtn.on('click', function () {
+//         $( ".foodi" ).remove();
+//         console.log('DELETE', id);
+//         reloadFoodChoices();
+//     });
+// }
