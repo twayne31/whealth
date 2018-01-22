@@ -12,7 +12,7 @@ module.exports = function(app) {
    });
 
   app.get("/api/foodChoices/createdAt/:createdAt", function(req, res) {
-    db.Post.findAll({
+    models.foodChoice.findAll({
       where: {
         createdAt: req.params.createdAt
       }
@@ -23,7 +23,7 @@ module.exports = function(app) {
   });
 
   app.get("/api/foodChoices/Meal/:Meal", function(req, res) {
-    db.Post.findAll({
+    models.foodChoice.findAll({
       where: {
         Meal: req.params.Meal
       }
@@ -36,8 +36,9 @@ module.exports = function(app) {
 
 
   app.post("/api/foodChoices", function(req, res) {
+    console.log("foodChoices")
       console.log(req.body);
-      db.foodChoice.create({
+      models.foodChoice.create({
         Qty: req.body.QTY,
         Unit: req.body.Unit,
         Meal: req.body.Meal,
@@ -52,7 +53,7 @@ module.exports = function(app) {
     });   
 
   app.put("/api/foodChoices", function(req, res) {
-    db.foodChoice.update(req.body,
+    models.foodChoice.update(req.body,
       {
         where: {
           id: req.body.id
@@ -64,7 +65,7 @@ module.exports = function(app) {
   });
 
   app.delete("/api/foodChoices/:id", function(req, res) {
-    db.foodChoice.destroy({
+    models.foodChoice.destroy({
       where: {
         id: req.params.id
       }
