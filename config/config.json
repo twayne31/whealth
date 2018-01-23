@@ -1,21 +1,45 @@
 {
   "development": {
     "username": "root",
+<<<<<<< HEAD
+<<<<<<< HEAD
+    "password": "one",
+=======
     "password": null,
+>>>>>>> ae19535b81db027d58fb25d2ec1f94100bfd33e6
+=======
+    "password": null,
+>>>>>>> 062da3b01f76f1680daffd9a92f2b0dc380a6257
     "database": "nutritionDB",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
+<<<<<<< HEAD
+<<<<<<< HEAD
+    "password": "one",
+=======
     "password": null,
+>>>>>>> ae19535b81db027d58fb25d2ec1f94100bfd33e6
+=======
+    "password": null,
+>>>>>>> 062da3b01f76f1680daffd9a92f2b0dc380a6257
     "database": "nutritionDB",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
+<<<<<<< HEAD
+<<<<<<< HEAD
+    "password": "one",
+=======
     "password": null,
+>>>>>>> ae19535b81db027d58fb25d2ec1f94100bfd33e6
+=======
+    "password": null,
+>>>>>>> 062da3b01f76f1680daffd9a92f2b0dc380a6257
     "database": "nutritionDB",
     "host": "127.0.0.1",
     "dialect": "mysql"

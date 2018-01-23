@@ -117,6 +117,10 @@ function reloadFoodChoices() {
                 foodChoice.append(deleteFoodChoiceBtn);
                 container.append(foodChoice);
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 062da3b01f76f1680daffd9a92f2b0dc380a6257
                 // $('.dropdown.meals')
                 //     .dropdown({
                 //         values: [
@@ -146,7 +150,15 @@ function reloadFoodChoices() {
                 //                 reloadFoodChoices();
                 //             }
                 //         }
+<<<<<<< HEAD
+                //     })
+=======
+
+>>>>>>> ae19535b81db027d58fb25d2ec1f94100bfd33e6
+                ;
+=======
                 //     });
+>>>>>>> 062da3b01f76f1680daffd9a92f2b0dc380a6257
             })
         }
         //
