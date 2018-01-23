@@ -49,7 +49,7 @@ $(document).ready(function () {
                     console.log(total)
                     $("#calCount").html("<h2 class='calReset'>" + total + " cal</h2>")
                     // console.log(calsArray);
-                    total = 0;
+                    // total = 0;
                     
                 })
                 $("#itemReset").click(function(){
