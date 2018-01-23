@@ -3,7 +3,7 @@ var total = 0;
 $(document).ready(function () {
     console.log("ready!");
 
-    reloadFoodChoices();
+    // reloadFoodChoices();
 
     $('.ui.search')
         .search({
@@ -55,34 +55,8 @@ $(document).ready(function () {
                     
                 })
                 $("#itemReset").click(function(){
-                    (".itemInfo").empty();
+                    $(".itemInfo").empty();
                 })
-                $('#nutritionFacts').nutritionLabel({
-                    'showServingUnitQuantity' : false,
-                    'showAmountPerServing' : false,
-                    'showIngredients' : false,
-                    'itemName' : 'Olive Tapenade',
-                
-                    'naFatCalories' : true,
-                    'naPolyFat' : true,
-                    'naMonoFat' : true,
-                    'naVitaminD' : true,
-                    'naPotassium' : true,
-                    'naCalcium' : true,
-                    'naIron' : true,
-                
-                    'valueCalories' : 800,
-                    'valueTotalFat' : 66,
-                    'valueSatFat' : 7,
-                    'valueTransFat' : 0,
-                    'valueCholesterol' : 0,
-                    'valueSodium' : 1560,
-                    'valueTotalCarb' : 46,
-                    'valueFibers' : 2,
-                    'valueSugars' : '<1g',
-                    'valueProteins' : 7,
-                    'showLegacyVersion' : false
-                });
 
                 
                 $.ajax({
@@ -112,93 +86,87 @@ $(document).ready(function () {
 });
 
 
-function reloadFoodChoices() {
-    $.ajax({
-        url: "/api/all",
-        method: "GET",
-    }).done(function (allFoodChoices) {
-        console.log(allFoodChoices)
-        // jquery select your container
-        var container = $('#foodChoicesList');
-        // clear container
-        container.empty();
-        // forEach loop over allFoodChoices prepending/appending to container var
-        if (allFoodChoices.length === 0) {
-            container.html(`
-                            <h2>Search for your food choice above</h2>
-                            `);
-        } else {
-            allFoodChoices.forEach(function (item) {
-                var foodChoice = $('<div>').addClass("foodi");
-                foodChoice.html(`
-                                <h4>${item.Food}</h4>
-                                <div>${item.Qty} ${item.Unit} ${item.Calories} calories</div>
-                                `);
-                var mealChoices = $('<div class="content">');
-
-                var deleteFoodChoiceBtn = $(`
-                <button class="negative ui icon button" data-item-id="${item.id}">
-                  <i class="trash icon"></i>
-                </button>
-            `);
-
-                foodChoice.append(deleteFoodChoiceBtn);
-                container.append(foodChoice);
-
-                // $('.dropdown.meals')
-                //     .dropdown({
-                //         values: [
-                //             {
-                //                 name: 'Breakfast',
-                //                 value: 'breakfast',
-                //                 selected: item.Meal.toLowerCase() === 'breakfast',
-                //             },
-                //             {
-                //                 name: 'Lunch',
-                //                 value: 'lunch',
-                //                 selected: item.Meal.toLowerCase() === 'lunch',
-                //             },
-                //             {
-                //                 name: 'Dinner',
-                //                 value: 'dinner',
-                //                 selected: item.Meal.toLowerCase() === 'dinner',
-                //             }
-                //         ],
-                //         onChange: function (value, text, $selectedItem) {
-                //             // custom action
-                //             // TODO: PUT the meals to API
-                //             console.log('value', value)
-                //             console.log('value', text)
-                //             console.log('selectedItem', $selectedItem);
-                //             if (value) {
-                //                 reloadFoodChoices();
-                //             }
-                //         }
-                //     });
-
-                //     });
-            })
-        }
-        //
-    }).fail(function (error) {
-        console.error(error);
-    });
-}
-
-// function deleteFoodChoice() {
-//     var id = $(this).attr('data-item-id');
+// function reloadFoodChoices() {
 //     $.ajax({
-//             method: "DELETE",
-//             url: "/api/foodChoices" + id
-//         })
-//         .then(function () {
-//             reloadFoodChoices();
-//         });
+//         url: "/api/all",
+//         method: "GET",
+//     }).done(function (allFoodChoices) {
+//         console.log(allFoodChoices)
+//         // jquery select your container
+//         var container = $('#foodChoicesList');
+//         // clear container
+//         container.empty();
+//         // forEach loop over allFoodChoices prepending/appending to container var
+//         if (allFoodChoices.length === 0) {
+//             container.html(`
+                            
+//                             `);
+//         } else {
+//             allFoodChoices.forEach(function (item) {
+//                 var foodChoice = $('<div>').addClass("foodi");
+//                 foodChoice.html(`
+//                                 <h4>${item.Food}</h4>
+//                                 <div>${item.Qty} ${item.Unit} ${item.Calories} calories</div>
+//                                 `);
+//             `);
 
+//                 foodChoice.append(deleteFoodChoiceBtn);
+//                 container.append(foodChoice);
 
-//     deleteFoodChoiceBtn.on('click', function () {
-//         $( ".foodi" ).remove();
-//         console.log('DELETE', id);
-//         reloadFoodChoices();
+//                 // $('.dropdown.meals')
+//                 //     .dropdown({
+//                 //         values: [
+//                 //             {
+//                 //                 name: 'Breakfast',
+//                 //                 value: 'breakfast',
+//                 //                 selected: item.Meal.toLowerCase() === 'breakfast',
+//                 //             },
+//                 //             {
+//                 //                 name: 'Lunch',
+//                 //                 value: 'lunch',
+//                 //                 selected: item.Meal.toLowerCase() === 'lunch',
+//                 //             },
+//                 //             {
+//                 //                 name: 'Dinner',
+//                 //                 value: 'dinner',
+//                 //                 selected: item.Meal.toLowerCase() === 'dinner',
+//                 //             }
+//                 //         ],
+//                 //         onChange: function (value, text, $selectedItem) {
+//                 //             // custom action
+//                 //             // TODO: PUT the meals to API
+//                 //             console.log('value', value)
+//                 //             console.log('value', text)
+//                 //             console.log('selectedItem', $selectedItem);
+//                 //             if (value) {
+//                 //                 reloadFoodChoices();
+//                 //             }
+//                 //         }
+//                 //     });
+
+//                 //     });
+//             })
+//         }
+//         //
+//     }).fail(function (error) {
+//         console.error(error);
 //     });
 // }
+
+// // function deleteFoodChoice() {
+// //     var id = $(this).attr('data-item-id');
+// //     $.ajax({
+// //             method: "DELETE",
+// //             url: "/api/foodChoices" + id
+// //         })
+// //         .then(function () {
+// //             reloadFoodChoices();
+// //         });
+
+
+// //     deleteFoodChoiceBtn.on('click', function () {
+// //         $( ".foodi" ).remove();
+// //         console.log('DELETE', id);
+// //         reloadFoodChoices();
+// //     });
+// // }
