@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-
+    <link rel="stylesheet" href="css/style">
     <!-- Site Properties -->
     <title>Homepage - Semantic</title>
     <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.css">
@@ -182,19 +182,26 @@
                     <input class="prompt" type="text" placeholder="Search Foods">
                     <i class="search icon"></i>
                 </div>
-                <h3>Simply search for the food item you ate or desire to eat see what the impact will be</h3>
+                <!-- <h3>Simply search for the food item you ate or desire to eat see what the impact will be</h3> -->
             </div>
         </div>
 
     </div>
 
-
+    <!-- right column of our html -->
     <div class="ui vertical stripe quote segment">
         <div class="ui equal width stackable internally celled grid">
             <div class="center aligned row">
 
                 <div id="foodChoicesList" class="column">
+                    <h3>Today</h3>
+                    <hr>
+                    <div class="itemInfo">
 
+                    </div>
+                    <div>
+                        <button class="ui button active" id="calculate">Calculate</button>
+                    </div>
                 </div>
                 <div class="column">
                     <h3>Nutrition Label</h3>
@@ -211,8 +218,9 @@
     <div class="ui inverted vertical footer segment">
         <div class="ui container">
                 <div class="seven wide column">
-                    <h4 class="ui inverted header">Learn More about Whealth</h4>
-                    <p>Learn more about whealth. Visit us on Facebook (icons) Instagram (icons) and Linkedin (icons).</p>
+                    <h3 class="ui inverted header">Total Calories Consumed</h3>
+                    <!-- <p>Learn more about whealth. Visit us on Facebook (icons) Instagram (icons) and Linke.</p> -->
+                    <div id= "calCount"></div>
                 </div>
             </div>
         </div>
