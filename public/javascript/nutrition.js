@@ -46,7 +46,6 @@ $(document).ready(function () {
             //        return newTotal
             //    }
                
-
                 $("#calculate").click(function(){
                     total = total + calories;
                     console.log(total)
@@ -55,6 +54,35 @@ $(document).ready(function () {
 
                     
                 })
+                $("#itemReset").click(function(){
+                    (".itemInfo").empty();
+                })
+                $('#nutritionFacts').nutritionLabel({
+                    'showServingUnitQuantity' : false,
+                    'showAmountPerServing' : false,
+                    'showIngredients' : false,
+                    'itemName' : 'Olive Tapenade',
+                
+                    'naFatCalories' : true,
+                    'naPolyFat' : true,
+                    'naMonoFat' : true,
+                    'naVitaminD' : true,
+                    'naPotassium' : true,
+                    'naCalcium' : true,
+                    'naIron' : true,
+                
+                    'valueCalories' : 800,
+                    'valueTotalFat' : 66,
+                    'valueSatFat' : 7,
+                    'valueTransFat' : 0,
+                    'valueCholesterol' : 0,
+                    'valueSodium' : 1560,
+                    'valueTotalCarb' : 46,
+                    'valueFibers' : 2,
+                    'valueSugars' : '<1g',
+                    'valueProteins' : 7,
+                    'showLegacyVersion' : false
+                });
 
                 
                 $.ajax({

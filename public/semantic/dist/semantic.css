@@ -581,7 +581,7 @@ h4,
 h5 {
   font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   line-height: 1.28571429em;
-  margin: calc(2rem -  0.14285714em ) 0em 1rem;
+  margin: calc(-1rem -  0.14285714em ) 0em 1rem;
   font-weight: bold;
   padding: 0em;
 }
@@ -592,10 +592,11 @@ h1 {
 }
 
 h2 {
-  font-size: 1.71428571rem;
+  font-size: 2.71428571rem;
 }
 
 h3 {
+
   font-size: 1.28571429rem;
 }
 
@@ -645,12 +646,12 @@ p:last-child {
 --------------------*/
 
 a {
-  color: #4183C4;
+  color: rgb(255, 255, 255);
   text-decoration: none;
 }
 
 a:hover {
-  color: #1e70bf;
+  color: #47cc6b;
   text-decoration: none;
 }
 
@@ -848,16 +849,17 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
 ---------------*/
 
 .ui.active.button {
-  background-color: #C0C1C2;
+  margin-top: 15px;
+  background-color: #47cc6b;
   background-image: none;
   box-shadow: 0px 0px 0px 1px transparent inset;
-  color: rgba(0, 0, 0, 0.95);
+  color: rgba(255, 255, 255, 0.95);
 }
 
 .ui.active.button:hover {
-  background-color: #C0C1C2;
+  background-color: #e67400;
   background-image: none;
-  color: rgba(0, 0, 0, 0.95);
+  color: rgba(255, 255, 255, 0.95);
 }
 
 .ui.active.button:active {
@@ -21858,7 +21860,7 @@ Floated Menu / Item
 .ui.secondary.pointing.menu {
   margin-left: 0em;
   margin-right: 0em;
-  border-bottom: 2px solid rgba(34, 36, 38, 0.15);
+  /* border-bottom: 2px solid rgba(34, 36, 38, 0.15); */
 }
 
 .ui.secondary.pointing.menu .item {
@@ -22353,7 +22355,7 @@ Floated Menu / Item
 ---------------*/
 
 .ui.inverted.menu {
-  border: 0px solid transparent;
+  /* border: 0px solid transparent; */
   background: #1B1C1D;
   box-shadow: none;
 }
