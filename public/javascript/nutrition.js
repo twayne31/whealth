@@ -3,8 +3,6 @@ var total = 0;
 $(document).ready(function () {
     console.log("ready!");
 
-    // reloadFoodChoices();
-
     $('.ui.search')
         .search({
             apiSettings: {
@@ -51,14 +49,11 @@ $(document).ready(function () {
                     console.log(total)
                     $("#calCount").html("<h2 class='calReset'>" + total + " cal</h2>")
                     // console.log(calsArray);
-
+                    total = 0;
                     
                 })
                 $("#itemReset").click(function(){
                     $(".itemInfo").empty();
-                })
-
-                $("#itemReset").click(function(){
                     $(".calReset").empty();
                 })
 
