@@ -1,3 +1,5 @@
+var total = 0;
+
 $(document).ready(function () {
     console.log("ready!");
 
@@ -20,9 +22,39 @@ $(document).ready(function () {
                     return {results};
                 },
             },
+
+            
+
             onSelect: function (selected, results) {
                 console.log('results', results);
                 console.log('selected', selected);
+                $(".itemInfo").append( "<b>" + selected.title +"</b><br>");
+                $(".itemInfo").append(selected.description +  "<br><br>");
+                
+               console.log(selected.fields.nf_calories)
+               var calories = selected.fields.nf_calories;
+            //    calsArray.push(calories);    
+            //    console.log(calsArray)
+            //    function totalCals(total, sum){
+            //        for (let i = 0; i < array.calori; i++) {
+            //         var newTotal = total + sum
+
+            //        }
+            //         // total += sum
+            //        return newTotal
+            //    }
+               
+
+                $("#calculate").click(function(){
+                    total = total + calories;
+                    console.log(total)
+                    $("#calCount").html("<h2>" + total + " cal</h2>")
+                    // console.log(calsArray);
+
+                    
+                })
+
+                
                 $.ajax({
                     url: "/api/foodChoices",
                     method: "POST",
@@ -100,36 +132,36 @@ function reloadFoodChoices() {
                 foodChoice.append(deleteFoodChoice);
                 container.append(foodChoice);
 
-                $('.dropdown.meals')
-                    .dropdown({
-                        values: [
-                            {
-                                name: 'Breakfast',
-                                value: 'breakfast',
-                                selected: item.Meal.toLowerCase() === 'breakfast',
-                            },
-                            {
-                                name: 'Lunch',
-                                value: 'lunch',
-                                selected: item.Meal.toLowerCase() === 'lunch',
-                            },
-                            {
-                                name: 'Dinner',
-                                value: 'dinner',
-                                selected: item.Meal.toLowerCase() === 'dinner',
-                            }
-                        ],
-                        onChange: function (value, text, $selectedItem) {
-                            // custom action
-                            // TODO: PUT the meals to API
-                            console.log('value', value)
-                            console.log('value', text)
-                            console.log('selectedItem', $selectedItem);
-                            if (value) {
-                                reloadFoodChoices();
-                            }
-                        }
-                    })
+                // $('.dropdown.meals')
+                //     .dropdown({
+                //         values: [
+                //             {
+                //                 name: 'Breakfast',
+                //                 value: 'breakfast',
+                //                 selected: item.Meal.toLowerCase() === 'breakfast',
+                //             },
+                //             {
+                //                 name: 'Lunch',
+                //                 value: 'lunch',
+                //                 selected: item.Meal.toLowerCase() === 'lunch',
+                //             },
+                //             {
+                //                 name: 'Dinner',
+                //                 value: 'dinner',
+                //                 selected: item.Meal.toLowerCase() === 'dinner',
+                //             }
+                //         ],
+                //         onChange: function (value, text, $selectedItem) {
+                //             // custom action
+                //             // TODO: PUT the meals to API
+                //             console.log('value', value)
+                //             console.log('value', text)
+                //             console.log('selectedItem', $selectedItem);
+                //             if (value) {
+                //                 reloadFoodChoices();
+                //             }
+                //         }
+                //     })
                 ;
             })
         }
