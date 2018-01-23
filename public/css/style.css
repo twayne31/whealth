@@ -39,7 +39,7 @@ h4{
     margin: 30px auto;
 }
 .imageTag {
-    background: url("../semantic/assets/images/orangeTree.jpg") no-repeat center center;
+    background: url("../images/orangeTree.jpg") no-repeat center center;
     filter: brightness(95%);
     background-size: cover;
     min-height: 100%;
