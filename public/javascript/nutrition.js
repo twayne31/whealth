@@ -49,13 +49,17 @@ $(document).ready(function () {
                 $("#calculate").click(function(){
                     total = total + calories;
                     console.log(total)
-                    $("#calCount").html("<h2>" + total + " cal</h2>")
+                    $("#calCount").html("<h2 class='calReset'>" + total + " cal</h2>")
                     // console.log(calsArray);
 
                     
                 })
                 $("#itemReset").click(function(){
                     $(".itemInfo").empty();
+                })
+
+                $("#itemReset").click(function(){
+                    $(".calReset").empty();
                 })
 
                 
